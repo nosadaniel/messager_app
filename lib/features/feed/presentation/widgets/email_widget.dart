@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:messager_app/presentation/widgets/email_content.dart';
-import 'package:messager_app/presentation/widgets/email_headline.dart';
 
 import '../../models/email.dart';
+import 'email_content.dart';
+import 'email_headline.dart';
 
 enum EmailType {
   preview,

@@ -20,9 +20,10 @@ class _EmailReplyOptionsState extends State<EmailReplyOptions> {
         children: [
           Expanded(
               child: TextButton(
-            style: ButtonStyle(
-                backgroundColor:
-                    WidgetStateProperty.all(_colorScheme.onInverseSurface)),
+            style: const ButtonStyle(
+                // backgroundColor:
+                //     WidgetStateProperty.all(_colorScheme.onInverseSurface),
+                ),
             onPressed: () {},
             child: Text(
               'Reply',

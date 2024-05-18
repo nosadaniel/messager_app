@@ -1,4 +1,4 @@
-import 'package:messager_app/models/user.dart';
+import 'package:messager_app/features/feed/models/user.dart';
 
 import 'attachment.dart';
 

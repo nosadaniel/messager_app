@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:messager_app/presentation/widgets/email_reply_options.dart';
+import 'package:messager_app/features/feed/presentation/widgets/star_button.dart';
 
 import '../../models/email.dart';
+import 'email_reply_options.dart';
 
 class EmailContent extends StatefulWidget {
   const EmailContent(
@@ -94,9 +95,7 @@ class _EmailContentState extends State<EmailContent> {
                     ],
                   ),
                 ),
-                if (constraints.maxWidth - 200 > 0) ...[
-                  //todo StarButton()
-                ]
+                if (constraints.maxWidth - 200 > 0) ...[const StarButton()]
               ],
             );
           }),

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:messager_app/data/data.dart' as data;
-import 'package:messager_app/presentation/widgets/email_widget.dart';
+import 'package:messager_app/features/feed/data/data.dart' as data;
+import 'package:messager_app/features/feed/presentation/widgets/search_bar.dart'
+    as search_bar;
 
 import '../../models/user.dart';
+import 'email_widget.dart';
 
-class EmailList extends StatelessWidget {
-  const EmailList(
+class EmailListView extends StatelessWidget {
+  const EmailListView(
       {super.key,
       this.selectedIndex,
       this.onSelected,
@@ -19,7 +21,7 @@ class EmailList extends StatelessWidget {
     return ListView(
       children: [
         const SizedBox(height: 8),
-        //todo: pass Searchbar widget here
+        search_bar.SearchBar(currentUser: currentUser),
         const SizedBox(height: 8),
         ...List.generate(
           data.emails.length,
