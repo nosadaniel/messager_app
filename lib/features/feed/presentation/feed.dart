@@ -16,20 +16,13 @@ class _FeedState extends State<Feed> {
   late final _colorScheme = Theme.of(context).colorScheme;
   late final _backgroundColor = Color.alphaBlend(
       _colorScheme.primary.withOpacity(0.14), _colorScheme.surface);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: _backgroundColor,
-        child: EmailListView(
-          currentUser: widget.currentUser,
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: _colorScheme.tertiaryContainer,
-        foregroundColor: _colorScheme.onTertiaryContainer,
-        onPressed: () {},
-        child: const Icon(Icons.add),
+    return Container(
+      color: _backgroundColor,
+      child: EmailListView(
+        currentUser: widget.currentUser,
       ),
     );
   }

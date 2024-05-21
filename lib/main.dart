@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:messager_app/features/feed/data/data.dart' as data;
-import 'package:messager_app/features/feed/presentation/feed.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:messager_app/routing/app_route.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const ProviderScope(child: MainApp()));
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends ConsumerWidget {
   const MainApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context, WidgetRef ref) {
+    final goRouter = ref.watch(goRouterProvider);
+    return MaterialApp.router(
       theme: ThemeData.light(useMaterial3: true),
-      home: Feed(currentUser: data.user_1),
+      routerConfig: goRouter,
+      //debugShowCheckedModeBanner: false,
     );
   }
 }
