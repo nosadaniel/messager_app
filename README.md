@@ -1,6 +1,6 @@
 # messager_app
 
-A new Flutter project.
+A application demonstrate how adaptive navigation, responsive layout works, 
 
 ## Getting Started
 
