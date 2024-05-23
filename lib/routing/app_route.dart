@@ -32,8 +32,10 @@ final goRouterProvider = Provider<GoRouter>(
                 path: '/${AppRoute.inbox.name}',
                 name: AppRoute.inbox.name,
                 pageBuilder: (context, state) => NoTransitionPage(
-                  child: Feed(currentUser: data.user_4),
-                  key: state.pageKey,
+                  child: Feed(
+                    currentUser: data.user_0,
+                    key: state.pageKey,
+                  ),
                 ),
               ),
             ]),

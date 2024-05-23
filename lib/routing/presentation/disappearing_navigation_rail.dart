@@ -24,6 +24,10 @@ class DisappearingNavigationRail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late final colorScheme = Theme.of(context).colorScheme;
+
+    late final navBackgroundColor = Color.alphaBlend(
+        colorScheme.primary.withOpacity(0.14), colorScheme.primaryContainer);
     return Scaffold(
       body: Row(children: [
         NavRailTransition(
@@ -56,7 +60,7 @@ class DisappearingNavigationRail extends StatelessWidget {
             ),
           ),
         ),
-        Expanded(child: body),
+        Expanded(child: Container(color: backgroundColor, child: body)),
       ]),
     );
   }
